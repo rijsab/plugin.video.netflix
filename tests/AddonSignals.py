@@ -114,5 +114,5 @@ def returnCall(signal, data=None, source_id=None):
     sendSignal('_return.{0}'.format(signal), data, source_id)
 
 
-def makeCall(signal, data=None, source_id=None, timeout_ms=1000):
+def makeCall(signal, data=None, source_id=None, timeout_ms=5000):
     return CallHandler(signal, data, source_id, timeout_ms).waitForReturn()
